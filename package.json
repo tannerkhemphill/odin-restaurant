@@ -1,0 +1,23 @@
+{
+  "name": "odin-restaurant",
+  "version": "1.0.0",
+  "description": "This project involves creating a basic homepage for a restaurant. The goal is to practice using npm and webpack along with previous javascript, css, and html knowledge.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tannerkhemphill/odin-restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tannerkhemphill/odin-restaurant/issues"
+  },
+  "homepage": "https://github.com/tannerkhemphill/odin-restaurant#readme",
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
