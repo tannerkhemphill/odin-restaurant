@@ -15,10 +15,17 @@ content {
     align-items: center;
 }
 
-.tabs {
+#tab-list {
     list-style-type: none;
     display: flex;
     gap: 30px;
+}
+
+.tab {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #information {
@@ -44,8 +51,32 @@ content {
     align-items: center;
 }
 
-#info-header {
-    
+#info-subheader-container {
+    width: 350px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-item-container {
+    width: 450px;
+    height: 300px;
+    margin: 0 auto;
+    border: 5px solid black;
+    margin-bottom: 50px;
+}
+
+#info-contact-container {
+    width: 450px;
+    height: 150px;
+    margin: 0 auto;
+    border: 5px solid black;
+    margin-bottom: 50px;
 }
 
 #info-desc-container {
