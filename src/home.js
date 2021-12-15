@@ -1,9 +1,14 @@
 import createMenuPage from './menu.js';
 import createContactPage from './contact.js';
+import Bricks from './bricks.png';
 
 export default function createHomePage() {
 
     const content = document.querySelector('#content')
+    const Background = new Image();
+    Background.src = Bricks;
+
+    content.appendChild(Background);
 
     while (content.firstChild) {
         content.removeChild(content.firstChild);
@@ -40,7 +45,7 @@ export default function createHomePage() {
     const infoHeader = document.createElement('div');
     infoHeader.id = 'info-header';
     const infoTitle = document.createElement('h1');
-    infoTitle.innerHTML = "Beary's Breakfast Bar";
+    infoTitle.innerHTML = "Mario Bros Pizzeria";
     infoHeader.appendChild(infoTitle);
     infoHeaderContainer.appendChild(infoHeader);
 
@@ -54,9 +59,13 @@ export default function createHomePage() {
     descTitle.innerHTML = 'Description';
     const desc = document.createElement('p');
     desc.classList.add('desc');
-    desc.innerHTML = "Beary's has the best porridge! The atmosphere and customer service make you feel like you are sitting in the middle of the woods, eating like a bear! This is exactly the kind of place that I like to return to again and again.";
+    desc.innerHTML = "Mario Bros has the best pizza in the Mushroom Kingdom! The atmosphere and customer service make you feel like you are sitting in the middle of Italy! This is exactly the kind of place that I like to return to again and again.";
+    const customer = document.createElement('p');
+    customer.classList.add('customer');
+    customer.innerHTML = 'Toad'
     infoDesc.appendChild(descTitle);
     infoDesc.appendChild(desc);
+    infoDesc.appendChild(customer);
     infoDescContainer.appendChild(infoDesc);
 
     information.appendChild(infoDescContainer);
@@ -102,7 +111,7 @@ export default function createHomePage() {
     const locTitle = document.createElement('h3');
     locTitle.innerHTML = 'Location';
     const loc = document.createElement('p');
-    loc.innerHTML = '123 Forest Drive, Forestville, Maine';
+    loc.innerHTML = '123 Koopa Way, Toad Town, Mushroom Kingdom';
     infoLoc.appendChild(locTitle);
     infoLoc.appendChild(loc);
     infoLocContainer.appendChild(infoLoc);
@@ -113,7 +122,7 @@ export default function createHomePage() {
 
     const footer = document.createElement('div');
     footer.id = 'footer';
-    footer.innerHTML = 'Restaurant';
+    footer.innerHTML = 'Characters owned by Nintendo';
 
     content.appendChild(footer);
 

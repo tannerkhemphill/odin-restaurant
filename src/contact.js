@@ -1,9 +1,17 @@
 import createHomePage from './home.js';
 import createMenuPage from './menu.js';
+import Bricks from './bricks.png';
+import Mario from './mario.png';
+import Luigi from './luigi.png';
+import Peach from './princess.png';
 
 export default function createContactPage() {
 
     const content = document.querySelector('#content')
+    const Background = new Image();
+    Background.src = Bricks;
+
+    content.appendChild(Background);
 
     while (content.firstChild) {
         content.removeChild(content.firstChild);
@@ -51,13 +59,24 @@ export default function createContactPage() {
     let infoContact = document.createElement('div');
     infoContact.id = 'info-contact';
     let contactTitle = document.createElement('h3');
-    contactTitle.innerHTML = 'Contact 1';
-    let contact = document.createElement('p');
-    contact.classList.add('contact');
-    contact.innerHTML = "Contact 1 info goes here";
+    contactTitle.innerHTML = 'Mario';
+    let position = document.createElement('p');
+    let phone = document.createElement('p');
+    let email = document.createElement('p');
+    position.innerHTML = "Owner/Waiter";
+    phone.innerHTML = "555-555-5555";
+    email.innerHTML = "Mario@MarioBros.com";
+    let pictureBox = document.createElement('div');
+    pictureBox.classList.add('picture-box');
+    let picture = new Image();
+    picture.src = Mario;
+    pictureBox.appendChild(picture);
     infoContact.appendChild(contactTitle);
-    infoContact.appendChild(contact);
+    infoContact.appendChild(position);
+    infoContact.appendChild(phone);
+    infoContact.appendChild(email);
     infoContactContainer.appendChild(infoContact);
+    infoContactContainer.appendChild(pictureBox);
 
     information.appendChild(infoContactContainer);
 
@@ -66,13 +85,24 @@ export default function createContactPage() {
     infoContact = document.createElement('div');
     infoContact.id = 'info-contact';
     contactTitle = document.createElement('h3');
-    contactTitle.innerHTML = 'Contact 2';
-    contact = document.createElement('p');
-    contact.classList.add('contact');
-    contact.innerHTML = "Contact 2 info goes here";
+    contactTitle.innerHTML = 'Luigi';
+    position = document.createElement('p');
+    phone = document.createElement('p');
+    email = document.createElement('p');
+    position.innerHTML = "Owner/Waiter";
+    phone.innerHTML = "555-555-5556";
+    email.innerHTML = "Luigi@MarioBros.com";
+    pictureBox = document.createElement('div');
+    pictureBox.classList.add('picture-box');
+    picture = new Image();
+    picture.src = Luigi;
+    pictureBox.appendChild(picture);
     infoContact.appendChild(contactTitle);
-    infoContact.appendChild(contact);
+    infoContact.appendChild(position);
+    infoContact.appendChild(phone);
+    infoContact.appendChild(email);
     infoContactContainer.appendChild(infoContact);
+    infoContactContainer.appendChild(pictureBox);
 
     information.appendChild(infoContactContainer);
 
@@ -81,13 +111,24 @@ export default function createContactPage() {
     infoContact = document.createElement('div');
     infoContact.id = 'info-contact';
     contactTitle = document.createElement('h3');
-    contactTitle.innerHTML = 'Contact 3';
-    contact = document.createElement('p');
-    contact.classList.add('contact');
-    contact.innerHTML = "Contact 3 info goes here";
+    contactTitle.innerHTML = 'Peach';
+    position = document.createElement('p');
+    phone = document.createElement('p');
+    email = document.createElement('p');
+    position.innerHTML = "Chef/Manager";
+    phone.innerHTML = "555-555-5557";
+    email.innerHTML = "Peach@MarioBros.com";
+    pictureBox = document.createElement('div');
+    pictureBox.classList.add('picture-box');
+    picture = new Image();
+    picture.src = Peach;
+    pictureBox.appendChild(picture);
     infoContact.appendChild(contactTitle);
-    infoContact.appendChild(contact);
+    infoContact.appendChild(position);
+    infoContact.appendChild(phone);
+    infoContact.appendChild(email);
     infoContactContainer.appendChild(infoContact);
+    infoContactContainer.appendChild(pictureBox);
 
     information.appendChild(infoContactContainer);
 
@@ -95,7 +136,7 @@ export default function createContactPage() {
 
     const footer = document.createElement('div');
     footer.id = 'footer';
-    footer.innerHTML = 'Restaurant';
+    footer.innerHTML = 'Characters owned by Nintendo';
 
     content.appendChild(footer);
 

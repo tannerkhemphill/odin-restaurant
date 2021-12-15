@@ -2,12 +2,14 @@ body {
     margin: 0;
 }
 
-content {
+#content {
     display: flex;
+    background: url('./bricks.png');
+    flex-direction: column;
 }
 
 #header {
-    background-color: lightblue;
+    background-color: sienna;
     height: 50px;
     margin-bottom: 50px;
     display: flex;
@@ -32,11 +34,33 @@ content {
     max-width: 800px;
     min-height: 800px;
     flex: 1;
-    background-color: lightblue;
+    background-color: sienna;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
+}
+
+.customer {
+    font-weight: 700;
+}
+
+.picture-container {
+    display: flex;
+    justify-content: end;
+}
+
+.picture-box {
+    width: 200px;
+    height: 200px;
+}
+
+.picture-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid black;
 }
 
 #info-header-container {
@@ -73,10 +97,11 @@ content {
 
 #info-contact-container {
     width: 450px;
-    height: 150px;
+    height: 200px;
     margin: 0 auto;
     border: 5px solid black;
     margin-bottom: 50px;
+    display: flex;
 }
 
 #info-desc-container {
@@ -107,7 +132,7 @@ ul {
 }
 
 #footer {
-    background-color: lightblue;
+    background-color: sienna;
     height: 50px;
     margin-top: 50px;
     display: flex;

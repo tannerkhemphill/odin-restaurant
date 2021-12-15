@@ -1,9 +1,20 @@
 import createHomePage from './home.js';
 import createContactPage from './contact.js';
+import Bricks from './bricks.png';
+import Tea from './tea.png';
+import Juice from './juice.png';
+import Salad from './salad.png';
+import Breadsticks from './breadsticks.png';
+import Mushroom from './mushroom.png';
+import Thin from './thin.png';
 
 export default function createMenuPage() {
 
     const content = document.querySelector('#content')
+    const Background = new Image();
+    Background.src = Bricks;
+
+    content.appendChild(Background);
 
     while (content.firstChild) {
         content.removeChild(content.firstChild);
@@ -62,12 +73,25 @@ export default function createMenuPage() {
     let infoItem = document.createElement('div');
     infoItem.id = 'info-item';
     let itemTitle = document.createElement('h3');
-    itemTitle.innerHTML = 'Item 1';
+    itemTitle.innerHTML = 'Koopa Tea';
     let item = document.createElement('p');
     item.classList.add('item');
-    item.innerHTML = "Description of item 1";
+    item.innerHTML = "Warm tea brewed with koopa leaf. Restores 10 HP";
+    let price = document.createElement('p');
+    price.classList.add('price');
+    price.innerHTML = "1 Coin";
+    let pictureContainer = document.createElement('div');
+    pictureContainer.classList.add('picture-container');
+    let pictureBox = document.createElement('div');
+    pictureBox.classList.add('picture-box');
+    let picture = new Image();
+    picture.src = Tea;
+    pictureBox.appendChild(picture);
+    pictureContainer.appendChild(pictureBox);
     infoItem.appendChild(itemTitle);
     infoItem.appendChild(item);
+    infoItem.appendChild(price);
+    infoItem.appendChild(pictureContainer);
     infoItemContainer.appendChild(infoItem);
 
     information.appendChild(infoItemContainer);
@@ -77,12 +101,25 @@ export default function createMenuPage() {
     infoItem = document.createElement('div');
     infoItem.id = 'info-item';
     itemTitle = document.createElement('h3');
-    itemTitle.innerHTML = 'Item 2';
+    itemTitle.innerHTML = 'Peach Juice';
     item = document.createElement('p');
     item.classList.add('item');
-    item.innerHTML = "Description of item 2";
+    item.innerHTML = "Fresh squeezed from a peachy peach. Restores 20 HP and cures poison";
+    price = document.createElement('p');
+    price.classList.add('price');
+    price.innerHTML = "3 Coins";
+    pictureContainer = document.createElement('div');
+    pictureContainer.classList.add('picture-container');
+    pictureBox = document.createElement('div');
+    pictureBox.classList.add('picture-box');
+    picture = new Image();
+    picture.src = Juice;
+    pictureBox.appendChild(picture);
+    pictureContainer.appendChild(pictureBox);
     infoItem.appendChild(itemTitle);
     infoItem.appendChild(item);
+    infoItem.appendChild(price);
+    infoItem.appendChild(pictureContainer);
     infoItemContainer.appendChild(infoItem);
 
     information.appendChild(infoItemContainer);
@@ -103,12 +140,25 @@ export default function createMenuPage() {
     infoItem = document.createElement('div');
     infoItem.id = 'info-item';
     itemTitle = document.createElement('h3');
-    itemTitle.innerHTML = 'Item 3';
+    itemTitle.innerHTML = 'Shy Guy Salad';
     item = document.createElement('p');
     item.classList.add('item');
-    item.innerHTML = "Description of item 3";
+    item.innerHTML = "Caesar Salad served with dressing and olives";
+    price = document.createElement('p');
+    price.classList.add('price');
+    price.innerHTML = "5 Coins";
+    pictureContainer = document.createElement('div');
+    pictureContainer.classList.add('picture-container');
+    pictureBox = document.createElement('div');
+    pictureBox.classList.add('picture-box');
+    picture = new Image();
+    picture.src = Salad;
+    pictureBox.appendChild(picture);
+    pictureContainer.appendChild(pictureBox);
     infoItem.appendChild(itemTitle);
     infoItem.appendChild(item);
+    infoItem.appendChild(price);
+    infoItem.appendChild(pictureContainer);
     infoItemContainer.appendChild(infoItem);
 
     information.appendChild(infoItemContainer);
@@ -118,12 +168,25 @@ export default function createMenuPage() {
     infoItem = document.createElement('div');
     infoItem.id = 'info-item';
     itemTitle = document.createElement('h3');
-    itemTitle.innerHTML = 'Item 4';
+    itemTitle.innerHTML = 'Bomb-omb Breadsticks';
     item = document.createElement('p');
     item.classList.add('item');
-    item.innerHTML = "Description of item 4";
+    item.innerHTML = "Seasoned garlic breadsticks served with dipping sauce";
+    price = document.createElement('p');
+    price.classList.add('price');
+    price.innerHTML = "7 Coins";
+    pictureContainer = document.createElement('div');
+    pictureContainer.classList.add('picture-container');
+    pictureBox = document.createElement('div');
+    pictureBox.classList.add('picture-box');
+    picture = new Image();
+    picture.src = Breadsticks;
+    pictureBox.appendChild(picture);
+    pictureContainer.appendChild(pictureBox);
     infoItem.appendChild(itemTitle);
     infoItem.appendChild(item);
+    infoItem.appendChild(price);
+    infoItem.appendChild(pictureContainer);
     infoItemContainer.appendChild(infoItem);
 
     information.appendChild(infoItemContainer);
@@ -144,12 +207,25 @@ export default function createMenuPage() {
     infoItem = document.createElement('div');
     infoItem.id = 'info-item';
     itemTitle = document.createElement('h3');
-    itemTitle.innerHTML = 'Item 5';
+    itemTitle.innerHTML = 'Mushroom Pizza';
     item = document.createElement('p');
     item.classList.add('item');
-    item.innerHTML = "Description of item 5";
+    item.innerHTML = "Classic Mario Bros pizza with toadstool mushroom topping";
+    price = document.createElement('p');
+    price.classList.add('price');
+    price.innerHTML = "10 Coins";
+    pictureContainer = document.createElement('div');
+    pictureContainer.classList.add('picture-container');
+    pictureBox = document.createElement('div');
+    pictureBox.classList.add('picture-box');
+    picture = new Image();
+    picture.src = Mushroom;
+    pictureBox.appendChild(picture);
+    pictureContainer.appendChild(pictureBox);
     infoItem.appendChild(itemTitle);
     infoItem.appendChild(item);
+    infoItem.appendChild(price);
+    infoItem.appendChild(pictureContainer);
     infoItemContainer.appendChild(infoItem);
 
     information.appendChild(infoItemContainer);
@@ -159,12 +235,25 @@ export default function createMenuPage() {
     infoItem = document.createElement('div');
     infoItem.id = 'info-item';
     itemTitle = document.createElement('h3');
-    itemTitle.innerHTML = 'Item 6';
+    itemTitle.innerHTML = 'Hammer Bros Pizza';
     item = document.createElement('p');
     item.classList.add('item');
-    item.innerHTML = "Description of item 6";
+    item.innerHTML = "Thin New Donk City style pizza prepared by the Hammer Bros";
+    price = document.createElement('p');
+    price.classList.add('price');
+    price.innerHTML = "10 Coins";
+    pictureContainer = document.createElement('div');
+    pictureContainer.classList.add('picture-container');
+    pictureBox = document.createElement('div');
+    pictureBox.classList.add('picture-box');
+    picture = new Image();
+    picture.src = Thin;
+    pictureBox.appendChild(picture);
+    pictureContainer.appendChild(pictureBox);
     infoItem.appendChild(itemTitle);
     infoItem.appendChild(item);
+    infoItem.appendChild(price);
+    infoItem.appendChild(pictureContainer);
     infoItemContainer.appendChild(infoItem);
 
     information.appendChild(infoItemContainer);
@@ -173,7 +262,7 @@ export default function createMenuPage() {
 
     const footer = document.createElement('div');
     footer.id = 'footer';
-    footer.innerHTML = 'Restaurant';
+    footer.innerHTML = 'Characters owned by Nintendo';
 
     content.appendChild(footer);
 
