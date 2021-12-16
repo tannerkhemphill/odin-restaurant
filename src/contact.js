@@ -67,7 +67,7 @@ export default function createContactPage() {
     phone.innerHTML = "555-555-5555";
     email.innerHTML = "Mario@MarioBros.com";
     let pictureBox = document.createElement('div');
-    pictureBox.classList.add('picture-box');
+    pictureBox.classList.add('character-box');
     let picture = new Image();
     picture.src = Mario;
     pictureBox.appendChild(picture);
@@ -93,7 +93,7 @@ export default function createContactPage() {
     phone.innerHTML = "555-555-5556";
     email.innerHTML = "Luigi@MarioBros.com";
     pictureBox = document.createElement('div');
-    pictureBox.classList.add('picture-box');
+    pictureBox.classList.add('character-box');
     picture = new Image();
     picture.src = Luigi;
     pictureBox.appendChild(picture);
@@ -119,7 +119,7 @@ export default function createContactPage() {
     phone.innerHTML = "555-555-5557";
     email.innerHTML = "Peach@MarioBros.com";
     pictureBox = document.createElement('div');
-    pictureBox.classList.add('picture-box');
+    pictureBox.classList.add('character-box');
     picture = new Image();
     picture.src = Peach;
     pictureBox.appendChild(picture);
