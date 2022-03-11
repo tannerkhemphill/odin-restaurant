@@ -1,7 +1,10 @@
+// This file contains the DOM maniplation to display the home page of a restaurant webpage
+
 import createMenuPage from './menu.js';
 import createContactPage from './contact.js';
 import Bricks from './bricks.png';
 
+// Function to create and display the home page
 export default function createHomePage() {
 
     const content = document.querySelector('#content')
@@ -10,10 +13,12 @@ export default function createHomePage() {
 
     content.appendChild(Background);
 
+    // Remove contents of previously displayed page 
     while (content.firstChild) {
         content.removeChild(content.firstChild);
     };
 
+    // Display header containing tabs to navigate to each page
     const header = document.createElement('div');
     header.id = 'header';
     const tabs = document.createElement('ul');
@@ -37,6 +42,7 @@ export default function createHomePage() {
 
     content.appendChild(header);
 
+    // The following code displays the description box information
     const information = document.createElement('div');
     information.id = 'information';
 
@@ -70,6 +76,7 @@ export default function createHomePage() {
 
     information.appendChild(infoDescContainer);
 
+    // The following code displays the hours box information
     const infoHoursContainer = document.createElement('div');
     infoHoursContainer.id = 'info-hours-container';
     const infoHours = document.createElement('div');
@@ -104,6 +111,7 @@ export default function createHomePage() {
 
     information.appendChild(infoHoursContainer);
 
+    // The following code displays the location box information
     const infoLocContainer = document.createElement('div');
     infoLocContainer.id = 'info-location-container';
     const infoLoc = document.createElement('div');
@@ -120,6 +128,7 @@ export default function createHomePage() {
 
     content.appendChild(information);
 
+    // Display footer at bottom of page
     const footer = document.createElement('div');
     footer.id = 'footer';
     footer.innerHTML = 'Characters owned by Nintendo';
@@ -129,6 +138,7 @@ export default function createHomePage() {
     const menu = document.querySelector('#menu');
     const contact = document.querySelector('#contact');
 
+    // Add event listeners to navigation tab buttons
     menu.addEventListener('click', createMenuPage);
     contact.addEventListener('click', createContactPage);
 }

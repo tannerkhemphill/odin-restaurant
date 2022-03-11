@@ -1,3 +1,5 @@
+// This file contains the DOM maniplation to display the menu page of a restaurant webpage
+
 import createHomePage from './home.js';
 import createContactPage from './contact.js';
 import Bricks from './bricks.png';
@@ -8,6 +10,7 @@ import Breadsticks from './breadsticks.png';
 import Mushroom from './mushroom.png';
 import Thin from './thin.png';
 
+// Function to create and display the menu page
 export default function createMenuPage() {
 
     const content = document.querySelector('#content')
@@ -16,10 +19,12 @@ export default function createMenuPage() {
 
     content.appendChild(Background);
 
+    // Remove contents of previously displayed page
     while (content.firstChild) {
         content.removeChild(content.firstChild);
     };
 
+    // Display header containing tabs to navigate to each page
     const header = document.createElement('div');
     header.id = 'header';
     const tabs = document.createElement('ul');
@@ -46,6 +51,7 @@ export default function createMenuPage() {
     const information = document.createElement('div');
     information.id = 'information';
 
+    // The following code displays the menu header
     const infoHeaderContainer = document.createElement('div');
     infoHeaderContainer.id = 'info-header-container';
     const infoHeader = document.createElement('div');
@@ -57,6 +63,7 @@ export default function createMenuPage() {
 
     information.appendChild(infoHeaderContainer);
 
+    // The following code displays the drinks menu header and options
     let infoSubHeaderContainer = document.createElement('div');
     infoSubHeaderContainer.id = 'info-subheader-container';
     let infoSubHeader = document.createElement('div');
@@ -124,6 +131,7 @@ export default function createMenuPage() {
 
     information.appendChild(infoItemContainer);
 
+    // The following code displays the sides menu header and options
     infoSubHeaderContainer = document.createElement('div');
     infoSubHeaderContainer.id = 'info-subheader-container';
     infoSubHeader = document.createElement('div');
@@ -191,6 +199,7 @@ export default function createMenuPage() {
 
     information.appendChild(infoItemContainer);
 
+    // The following code displays the sides menu header and options
     infoSubHeaderContainer = document.createElement('div');
     infoSubHeaderContainer.id = 'info-subheader-container';
     infoSubHeader = document.createElement('div');
@@ -260,6 +269,7 @@ export default function createMenuPage() {
 
     content.appendChild(information);
 
+    // Display footer at bottom of page
     const footer = document.createElement('div');
     footer.id = 'footer';
     footer.innerHTML = 'Characters owned by Nintendo';
@@ -269,6 +279,7 @@ export default function createMenuPage() {
     const home = document.querySelector('#home');
     const contact = document.querySelector('#contact');
 
+    // Add event listeners to navigation tab buttons
     home.addEventListener('click', createHomePage);
     contact.addEventListener('click', createContactPage);
 }

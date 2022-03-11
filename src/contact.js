@@ -1,3 +1,5 @@
+// This file contains the DOM maniplation to display the contact page of a restaurant webpage
+
 import createHomePage from './home.js';
 import createMenuPage from './menu.js';
 import Bricks from './bricks.png';
@@ -5,6 +7,7 @@ import Mario from './mario.png';
 import Luigi from './luigi.png';
 import Peach from './princess.png';
 
+// Function to create and display the contact page
 export default function createContactPage() {
 
     const content = document.querySelector('#content')
@@ -13,10 +16,12 @@ export default function createContactPage() {
 
     content.appendChild(Background);
 
+    // Remove contents of previously displayed page
     while (content.firstChild) {
         content.removeChild(content.firstChild);
     };
 
+    // Display header containing tabs to navigate to each page
     const header = document.createElement('div');
     header.id = 'header';
     const tabs = document.createElement('ul');
@@ -43,6 +48,7 @@ export default function createContactPage() {
     const information = document.createElement('div');
     information.id = 'information';
 
+    // The following code displays the contact header
     const infoHeaderContainer = document.createElement('div');
     infoHeaderContainer.id = 'info-header-container';
     const infoHeader = document.createElement('div');
@@ -54,6 +60,7 @@ export default function createContactPage() {
 
     information.appendChild(infoHeaderContainer);
 
+    // The following code displays the first contact box
     let infoContactContainer = document.createElement('div');
     infoContactContainer.id = 'info-contact-container';
     let infoContact = document.createElement('div');
@@ -80,6 +87,7 @@ export default function createContactPage() {
 
     information.appendChild(infoContactContainer);
 
+    // The following code displays the second contact box
     infoContactContainer = document.createElement('div');
     infoContactContainer.id = 'info-contact-container';
     infoContact = document.createElement('div');
@@ -106,6 +114,7 @@ export default function createContactPage() {
 
     information.appendChild(infoContactContainer);
 
+    // The following code displays the third contact box
     infoContactContainer = document.createElement('div');
     infoContactContainer.id = 'info-contact-container';
     infoContact = document.createElement('div');
@@ -134,12 +143,14 @@ export default function createContactPage() {
 
     content.appendChild(information);
 
+    // Display footer at bottom of page
     const footer = document.createElement('div');
     footer.id = 'footer';
     footer.innerHTML = 'Characters owned by Nintendo';
 
     content.appendChild(footer);
 
+    // Add event listeners to navigation tab buttons
     const home = document.querySelector('#home');
     const menu = document.querySelector('#menu');
     
